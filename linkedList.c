@@ -45,13 +45,42 @@ void addTail(int value) {
 			ndPtr = ndPtr->next;
 		}
 		
-		newPtr = create_node(value);
-		ndPtr->next = newPtr;
-		
+		newPtr = create_node(value);	//새로운 노드(NULL)를 만들어 주고, 
+		ndPtr->next = newPtr;			//그 노드를 연결해준다. 		
 	}
-
+	
 } 
  
+void genList(void) {
+	
+	list = create_node(0);
+	
+	return;
+} 
+
+void print_list(void) {
+	
+	linknd_t *ndPtr;
+	
+	ndPtr = list->next;
+	while(ndPtr != NULL) {
+		printf("%i", ndPtr->data);
+		ndPtr = ndPtr->next;	
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
  
  
  
