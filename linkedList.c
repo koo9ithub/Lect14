@@ -28,4 +28,39 @@ linknd_t* create_node(int value) {
 	
 	return ndPtr; 
 } 
+
+void addTail(int value) {
+	
+	linknd_t *ndPtr;
+	linknd_t *newPtr;
+	
+	if (list == NULL)
+	{
+		return;
+	}
+	else
+	{
+		ndPtr = list;
+		while (ndPtr->next != NULL) {
+			ndPtr = ndPtr->next;
+		}
+		
+		newPtr = create_node(value);
+		ndPtr->next = newPtr;
+		
+	}
+
+} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
